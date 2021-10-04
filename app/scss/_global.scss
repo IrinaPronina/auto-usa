@@ -1,0 +1,136 @@
+html,
+body {
+  /* height: 100%; */
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  /*  display: flex;
+  flex-direction: column; */
+  background-color: $white;
+  font-size: 18px;
+  line-height: 1.48;
+  color: $black;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+
+  @media (max-width: 576px) {
+    font-size: 16px;
+  }
+}
+
+/* .main {
+  flex-grow: 1;
+} */
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media (max-width: 1200px) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 30px;
+  }
+}
+
+a {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.logo {
+  width: 197px;
+  height: 53px;
+  display: block;
+}
+
+.icon-svg {
+  width: 100%;
+}
+
+.btn {
+  padding: 14px 54px 15px;
+  font-size: 14px;
+  color: $white;
+  background-color: $accent;
+  text-transform: uppercase;
+  border: $accent 2px solid;
+  transition: all ease 0.5s;
+
+  &:hover {
+    color: $accent;
+    background-color: $white;
+  }
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 400;
+  color: $form;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  position: relative;
+
+  @media (max-width: 1200px) {
+    font-size: 34px;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 20px;
+  }
+
+  &::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background-color: $form;
+    position: absolute;
+    top: 20px;
+    margin-left: 20px;
+
+    @media (max-width: 992px) {
+      top: 16px;
+      height: 2px;
+      width: 70px;
+    }
+
+    @media (max-width: 576px) {
+      top: 12px;
+      margin-left: 10px;
+      width: 60px;
+      height: 2px;
+    }
+  }
+}
+
+.section {
+  padding: 100px 0;
+}

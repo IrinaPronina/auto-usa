@@ -1,0 +1,51 @@
+.footer {
+
+  background-color: $form;
+
+
+
+  // .footer__wrapper
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      height: auto;
+    }
+  }
+
+  &__logo{
+    @media (max-width: 768px) {
+      padding: 40px 0 40px 0;
+    }
+  }
+
+  // .footer__network
+
+  &__network {
+    padding: 0;
+    @media (max-width: 768px) {
+      padding: 40px 0;
+    }
+  }
+
+  // .footer__conf
+
+  &__conf {
+    color: $white;
+    transition: color 0.5s ease;
+
+
+    @media (max-width: 768px) {
+      padding: 15px 0;
+    }
+
+    &:hover {
+      color: $grey;
+    }
+  }
+}
