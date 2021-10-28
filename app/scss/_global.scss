@@ -26,6 +26,7 @@ body {
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
 
+
   @media (max-width: 576px) {
     font-size: 16px;
   }
@@ -39,6 +40,7 @@ body {
   max-width: 1230px;
   margin: 0 auto;
   padding: 0 15px;
+
 
   @media (max-width: 1200px) {
     padding: 0 20px;
@@ -133,4 +135,23 @@ button {
 
 .section {
   padding: 100px 0;
+}
+
+.anim-show {
+  transform: translate(0px, 120px);
+  opacity: 0;
+  transition: all ease 2s 0s;
+}
+
+.anim-show.active,
+.active .anim-show {
+	opacity: 1;
+	transform: translate(0px, 0px);
+}
+
+.hidden {
+  display: none !important;
+}
+.hide {
+  display: none !important;
 }

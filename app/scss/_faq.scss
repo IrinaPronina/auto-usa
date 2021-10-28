@@ -1,0 +1,138 @@
+.faq {
+  transform: translate(0px, 10%);
+  opacity: 0.2;
+  transition: all ease 2s 0s;
+
+  &.active{
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+  padding-bottom: 100px;
+
+  // .faq__content
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  // .faq__block
+
+  &__block {
+    width: 100%;
+    margin-right: 95px;
+
+    @media (max-width: 1200px) {
+      margin-right: 55px;
+    }
+
+    @media (max-width: 992px) {
+      margin-right: 0;
+    }
+  }
+
+  // .faq__title
+
+  &__title {
+    &--mob {
+      display: none;
+    }
+
+    @media (max-width: 567px) {
+      display: none;
+      &--mob {
+        display: block;
+      }
+    }
+  }
+
+  // .faq__list
+
+  &__list {
+    background-color: #0d0533;
+    padding: 25px 25px 25px 25px;
+
+    @media (max-width: 1280px) {
+      padding: 15px;
+    }
+  }
+
+  // .faq__item
+
+  &__item {
+    color: $white;
+    margin-bottom: 20px;
+  }
+
+  // .faq__link
+
+  &__link {
+
+    &--active {
+      margin-bottom: 16px;
+      background-image: url(../images/arrowdown.svg);
+    }
+
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    background-image: url(../images/arrowup.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    outline: none;
+    background-size: 30px;
+    transition: all ease-in-out 0.2s;
+  }
+
+  // .faq__link-wrapper
+
+  &__link-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .faq__link-title
+
+  &__link-title {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: $white;
+
+    @media (max-width: 1200px) {
+      font-size: 20px;
+      margin: 0;
+      padding: 0 35px 0 0;
+      text-align: left;
+    }
+  }
+
+  &__img {
+    @media (max-width: 1200px) {
+      width: 25%;
+    }
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+}
+
+
+.faq-sub {
+  transition: all 0.3s ease-in-out;
+
+  // .faq-sub__item
+
+  &__item {
+    opacity: 0.8;
+    margin-bottom: 10px;
+  }
+
+  // .faq-sub__text
+
+  &__text {}
+}

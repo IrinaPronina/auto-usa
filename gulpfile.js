@@ -22,7 +22,7 @@ function browsersync() {
       baseDir: 'app/'
     },
     notify: false
-  })
+  });
 }
 
 function fonts(){
@@ -42,7 +42,7 @@ function styles() {
       grid: true
     }))
     .pipe(dest('app/css'))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream());
 }
 
 function images() {
@@ -68,14 +68,14 @@ function images() {
         ]
       })
     ]))
-    .pipe(dest('dist/images'))
+    .pipe(dest('dist/images'));
 }
 
 
 function svgSprite() {
   return src('app/images/**/*.svg')
     .pipe(svgstore())
-    .pipe(dest('./app/images'))
+    .pipe(dest('./app/images'));
 }
 
 function build() {
@@ -86,18 +86,18 @@ function build() {
     ], {
       base: 'app'
     })
-    .pipe(dest('dist'))
+    .pipe(dest('dist'));
 }
 
 function cleanDist() {
-  return del('dist')
+  return del('dist');
 }
 
 
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/**/*.html']).on('change', browserSync.reload)
+  watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 
 
@@ -111,7 +111,7 @@ function scripts() {
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(dest('app/js'))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream());
 }
 
 

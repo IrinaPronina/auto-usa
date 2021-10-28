@@ -1,5 +1,13 @@
 .advantage {
 
+  transform: translate(0px, 10%);
+  opacity: 0.2;
+  transition: all ease 2s 0s;
+
+  &.active{
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
   // .advantage__wrapper
 
   &__wrapper {
@@ -25,6 +33,7 @@
       display: none;
     }
   }
+
 
 }
 
