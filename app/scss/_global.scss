@@ -35,7 +35,9 @@ body {
 /* .main {
   flex-grow: 1;
 } */
-
+.site-container{
+  overflow: hidden;
+}
 .container {
   max-width: 1230px;
   margin: 0 auto;

@@ -85,6 +85,7 @@ btns.forEach((btn, index) => {
 const modalBtn = document.querySelector('.header__content-btn');
 const modalBtn2 = document.querySelector('.service__content-btn');
 const modal = document.querySelector('.modal');
+const modal2 = document.querySelector('.modal-2');
 
 modalBtn.addEventListener('click', () => {
   modal.classList.remove('hide');
@@ -98,10 +99,10 @@ modal.addEventListener("click", (event) => {
 });
 
 modalBtn2.addEventListener('click', () => {
-  modal.classList.remove('hide');
+  modal2.classList.remove('hide');
 });
 
-modal.addEventListener("click", (event) => {
+modal2.addEventListener("click", (event) => {
 
   if(event.target.classList.contains('overlay') || event.target.classList.contains('modal__close')) {
     modal.classList.add('hide');
